@@ -222,7 +222,7 @@
 
 (defun initialize-invite-tab ()
   "Initialize invite table. Call again to reinitialize."
-  (setf *active-invites* (make-hash-table :synchronized t)))
+  (setf *active-invites* (make-hash-table :synchronized t :test 'equal)))
 
 (defun initialize-tag-index ()
   "Initializes the tag index. Call again to reinitialize."
